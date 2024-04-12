@@ -1,7 +1,7 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2021.10.5)  12 APR 2024 11:01
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2021.10.5)  12 APR 2024 11:03
 entering extended mode
-**"./exemple_Latex - 副本.tex"
-(exemple_Latex - 副本.tex
+**./rapport.tex
+(rapport.tex
 LaTeX2e <2021-06-01> patch level 1
 L3 programming layer <2021-08-27> (D:\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2021/02/12 v1.4n Standard LaTeX document class
@@ -341,8 +341,9 @@ File: l3backend-xetex.def 2021-08-04 L3 backend support: XeTeX
 \g__pdf_backend_object_int=\count289
 \g__pdf_backend_annotation_int=\count290
 \g__pdf_backend_link_int=\count291
-) (exemple_Latex - 副本.aux)
-\openout1 = `"exemple_Latex - 副本.aux"'.
+)
+No file rapport.aux.
+\openout1 = `rapport.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
@@ -386,13 +387,14 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 23.
 LaTeX Info: Redefining \pageref on input line 23.
 LaTeX Info: Redefining \nameref on input line 23.
-
-(exemple_Latex - 副本.out) (exemple_Latex - 副本.out)
 \@outlinefile=\write3
-\openout3 = `"exemple_Latex - 副本.out"'.
+\openout3 = `rapport.out'.
+
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
 
 LaTeX Font Info:    Trying to load font information for U+msa on input line 25.
-
 
 (D:\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -404,17 +406,23 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 [1
 
-] (exemple_Latex - 副本.aux)
-Package rerunfilecheck Info: File `"exemple_Latex - 副本".out' has not changed.
-(rerunfilecheck)             Checksum: <no file>.
+] (rapport.aux)
+
+Package rerunfilecheck Warning: File `rapport.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `rapport.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  FD90136D31CC259FB5E1ED336511F662;170.
  ) 
 Here is how much of TeX's memory you used:
- 10460 strings out of 411263
- 151385 string characters out of 2838197
- 482789 words of memory out of 3000000
- 30779 multiletter control sequences out of 15000+600000
+ 10451 strings out of 411263
+ 151047 string characters out of 2838197
+ 482400 words of memory out of 3000000
+ 30776 multiletter control sequences out of 15000+600000
  408475 words of font info for 51 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 60i,6n,66p,283b,337s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,6n,66p,270b,337s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on exemple_Latex - 副本.pdf (1 page).
+Output written on rapport.pdf (1 page).
