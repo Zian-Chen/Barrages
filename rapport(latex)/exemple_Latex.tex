@@ -1,0 +1,97 @@
+% pour générer un pdf: faire
+% pdflatex exemple.tex
+\documentclass{article}
+
+%% Paquets LateX utiles
+
+\usepackage[utf8]{inputenc} 		% encodage des caractères utilisés (pour les caractères accentués) 
+% pour les accents, on peut soit préciser l'encodage et utiliser des caractères accentués, soit utiliser é pour un e accent aigu, \`e pour un e accent grave, etc...
+%\usepackage[latin1]{inputenc} 		% autre encodage
+\usepackage[french]{babel}		% pour une mise en forme "francaise"
+\usepackage{amsmath,amssymb,amsthm}	% pour les maths
+\usepackage{graphicx}			% pour inclure des graphiques
+\usepackage{hyperref}			% si vous souhaitez que les references soient des hyperliens
+\usepackage{color}			% pour ajouter des couleurs dans vos textes
+
+
+% Définitions de macro
+\def \R {\mathbb R}					% definit un nouveau mot cle LateX. Ici, \R designera l'ensemble des réels
+\newcommand \fonctionsContinues[2] {C^0(#1,#2)}		% Une nouvelle commande avec des arguments (ici 2)
+
+
+\title{Exemple LateX}
+\author{Flore Nabet\footnote{\'Ecole polytechnique}}	
+
+\begin{document}
+\maketitle						% Génère le titre
+
+\tableofcontents					% si on veut une table des matieres
+\listoffigures						% si on veut la liste des figures
+%\listoftables						% si on veut la liste des tableaux
+
+
+\begin{center}
+\textbf{Résumé}
+\end{center}
+Un exemple de fichier {\LaTeX} de quelques lignes.
+
+\section{Introduction}
+{\LaTeX} permet d'écrire des articles scientifiques (ou non).
+
+\section{Les formules}
+
+\subsection{Intégrale}
+
+\subsubsection{En ligne}
+Une formule en ligne telle que $\int_0^1 x\,dx=1/2$.
+
+\subsubsection{Numérotée}
+\begin{equation}
+\label{Formule1}
+\int_0^1 x\,dx=\frac 1 2.
+\end{equation}
+
+\subsubsection{Non numérotée}
+\begin{equation*}
+\int_0^1 x\,dx=\frac 1 2.
+\end{equation*}
+
+
+\subsubsection{Alignement des équations}
+\begin{align}
+\int_0^1 x\,dx&=\frac 1 2 \\
+\int_0^1 x^2 \,dx &= \frac 1 3
+\end{align}
+
+
+\paragraph{Référence} 
+On peut faire référence \`a la formule~\eqref{Formule1} [il faut compiler deux fois].
+
+\subsection{Les nouvelles commandes}
+
+\paragraph{Def} On note $\R$ l'ensemble des réels.
+\paragraph{Newcommand} On désigne par $\fonctionsContinues{[0,1]}{\R}$ l'ensemble des fonctions continues de $[0,1]$ vers $\R$.
+
+\section{Figures}
+On peut aussi inclure des figures sous différents formats. La figure \ref{fig} est de format \textbf{png}.
+%\begin{figure}
+%\begin{center}
+%\includegraphics[width=0.3\textwidth]{Decomp_spin_psi_t0_2.png}
+%\includegraphics[width=1cm]{Decomp_spin_psi_t0_2.png}
+%\caption{Un exemple de figures}\label{fig}
+%\end{center}
+%\end{figure}
+{\LaTeX} optimise le placement des figures. C'est en général une mauvaise idée d'essayer de le contrarier.
+
+\section{Conclusion}
+
+Il faut toujours citer ses sources. Ce document a été écrit à partir d'un document initialement rédigé par Olivier Pantz \url{https://math.unice.fr/~pantz/Documents/Enseignement/LaTeX/exemple.tex}
+
+Vous pouvez également utiliser des environnements collaboratifs (e.g. overleaf \url{https://fr.overleaf.com/}) 
+
+On peut également réaliser des présentations de types PowerPoint avec {\LaTeX} en utilisant beamer.
+
+
+\end{document}
+
+
