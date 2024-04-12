@@ -15,7 +15,7 @@
 
 
 % Définitions de macro
-
+\def \dd {\mathrm{d}}
 
 \title{Barrages et Risques d’Inondation}
 \author{Zian Chen \& Ruikai Chen}	
@@ -29,6 +29,19 @@
 
 \section{Etude d’un seul barrage}
 
+On a d'abord $(N_t)$ un processus de Poisson, représenté par 
+\[N_t = \begin{cases}0&\textrm{pour $t\in [0, T_1[$,}\\
+  1&\textrm{pour $t\in [T_1, T_2[$,}\\
+  2&\textrm{pour $t\in [T_2, T_3[$,}\\
+  \vdots &\quad\vdots\end{cases}\]
+  
+La solution est donnée par
+\[X_t^1 = \exp(-r_1 t)\int_0^t \exp(-r_1 s)\dd A_s^1 + x_0^1\exp(-r_1t),\]
+où $A_s^1$ est le volume cumulé au temps $s$. Puisque c'est un processus de Poisson composé, on considère l'intégrale comme une sommation. On obtient alors
+\[X_t^1 = \begin{cases}x_0^1\exp(-r_1 t)&\textrm{pour $t\in [0, T_1[$,}\\
+  \exp(-r_1 t)(x_0^1+\exp(r_1 T_1)U_1^1)&\textrm{pour $t\in [T_1, T_2[$,}\\
+  \exp(-r_1 t)(x_0^1+\exp(r_1 T_1)U_1^1+\exp(r_1 T_2)U_2^1)&\textrm{pour $t\in [T_2, T_3[$,}\\
+  \vdots &\quad\vdots\end{cases}\]
 \end{document}
 
 
