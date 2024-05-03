@@ -73,7 +73,7 @@ Une illustration des évolutions de volume d'eau est donnée dans le figure \ref
 \section{Risque d'inondation}
 Dans cette section, nous allons introduire de différentes approches pour simuler le rique d'inondation. Pour un premier temps, nous considérons le cas d'un seul barrage. Et puis nous prenons en compte des intersections de deux barrages.
 \subsection{Le cas d'un seul barrage}
-Quand il y a un seul barrage qui est présent, nous utilisons les notations sans indice $X_t$, $A_t$, etc. et nous formulons le problème de rique d'inondation comme suit : nous voulons trouver le seuil $x^\ast$ (soit pour un certain $T$, $X=X_T$, soit pour le volume maximum dans $[0,T]$, $X=\max_{0\le s\le T}X_s$) tel que
+Quand il y a un seul barrage qui est présent, nous utilisons les notations sans indice $i$ comme $X_t$ et $A_t$. et nous formulons le problème de rique d'inondation comme suit : nous voulons trouver le seuil $x^\ast$ (soit pour un certain $T$, on prend $X=X_T$, soit pour le volume maximum dans $[0,T]$, on prend $X=\max_{0\le s\le T}X_s$) tel que
 \[\mathbb{P}(X>x^\ast)\leq \alpha.\]
 \paragraph{Monte-Carlo naïf} La méthode de Monte-Carlo naïf pour trouver un quantile $1-\alpha$ est de simuler $N$ trajectoires de $X$, notons $(X_i)$ et de prendre le quantile empirique. Nous rappelons que le quantile empirique est donné par
 \[\hat{q}_{1-\alpha} = \inf\{x\in \mathbb{R}:\hat{F}_N(x)\geq 1-\alpha\},\]
@@ -81,8 +81,18 @@ où $\hat{F}_N$ est la fonction de répartition empirique.
 \[ \hat{F}_N(x) = \frac{1}{N}\sum_{i=1}^N \mathbf{1}_{X_i\leq x}.\]
 Si nous trions les valeurs de $X_i$ comme $X_{(1,N)}\leq X_{(2,N)}\leq \cdots \leq X_{(N<N)}$, alors nous avons
 \[\hat{q}_{1-\alpha} = X_{(\lceil N(1-\alpha)\rceil,N)}.\]
+Cet algorithme est réalisé comme méthode $\texttt{get\_critical\_level}$ dans la classe $\texttt{naive\_MonteCarlo}$.
 \paragraph{Importance Sampling (Esscher)}
 \paragraph{Algorithme de la dernière particule}
+
+L'idée de l'algorithme de la dernière particule est de renouveler la valeur minimale d'une suite de $X$ selon la loi de $(X|X>L)$ où $L=\min(X_i)$. 
+
+Précisément, on simule d'abord une suite, notons $(X_i)_{1\leq i\leq n}$, selon la loi de $X$. On note le minimun temporaire $L=\min_{1\leq i\leq n}(X_i)$, et on remet à jour ces $X_i$ égaux à $L$ par un échantillon indépendant selon la loi de $(X|X>L)$. En répétant ce processus $\displaystyle \left\lceil\frac{\log \alpha}{\log(1-1/n)}\right\rceil$ fois, le minimum final $L$ est le seuil dont on a besoin.
+
+Il nous reste à obtenir un échatillon selon la loi de $(X|X>L)$. Rappelons que $X_t$ est obtenu du processus de Poisson composé $A_t$, d'où il suffit de mettre à jour $A_t$ correspondant. L'idée est à partir d'une autre particule, on fait $M$ itérations pour que ce soit presque indépendent de celle originale. Pour ce faire, on utilise l'algorithme de coloriage pour renouveler $N_t$ et pour des $U_i$, on obtient une combinaison des valeurs originales et des échantillons indépendants si le $i$-ième saut est gradé, où la proportion $q$ sera considérée dans la partie numérique.
+
+On a deux méthodes dans la programmation, la méthode $\texttt{get\_new\_rainfall}$ et l'autre $\texttt{get\_critical\_level\_and\_distribution}$ dans la classe $\texttt{last\_particle}$.
+
 \section{Simulation numérique} 
 \end{document}
 
