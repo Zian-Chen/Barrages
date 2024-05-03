@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2021.10.5)  3 MAY 2024 15:13
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2021.10.5)  3 MAY 2024 16:46
 entering extended mode
 **./rapport.tex
 (rapport.tex
@@ -426,7 +426,7 @@ Package rerunfilecheck Info: File `rapport.out' has not changed.
 Here is how much of TeX's memory you used:
  10854 strings out of 411263
  156088 string characters out of 2838197
- 503270 words of memory out of 3000000
+ 503271 words of memory out of 3000000
  31146 multiletter control sequences out of 15000+600000
  411165 words of font info for 70 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
