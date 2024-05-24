@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2021.10.5)  3 MAY 2024 18:20
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2021.10.5)  24 MAY 2024 09:36
 entering extended mode
 **./rapport.tex
 (rapport.tex
@@ -419,7 +419,7 @@ Overfull \hbox (1.63pt too wide) in paragraph at lines 94--95
 \TU/lmr/m/n/10 l’autre $[]$ dans la classe $[]$. 
  []
 
-[4] (rapport.aux)
+[4] [5] (rapport.aux)
 Package rerunfilecheck Info: File `rapport.out' has not changed.
 (rerunfilecheck)             Checksum: 58AA6228A763685ACBFEC65AC9017F88;688.
  ) 
@@ -432,4 +432,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  60i,12n,66p,768b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on rapport.pdf (4 pages).
+Output written on rapport.pdf (5 pages).
